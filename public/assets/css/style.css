@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    padding-top: 20px;
+    background-color: #ecf4c3;
+}
+
+header div img {
+    max-height: 190px;
+}
+
+.panel, .panel-body {
+    margin-right: auto;
+}
+
+.content {
+    padding-top: 20px;
+}
+
+.form-group button {
+    margin: 20px 10px 10px 10px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+.devoured {
+    background-color: #eeeeee;
+    cursor: default;
+}

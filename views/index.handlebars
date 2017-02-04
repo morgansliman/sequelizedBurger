@@ -1,0 +1,36 @@
+{{#if burgers}}
+    <div class="row">
+        <div class="col-sm-7">
+            {{#each burgers}}
+                {{#unless burger.devoured}}
+                    <div class="clearfix">
+                        <div class="col-sm-10">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    {{burger.id}}. {{capitalize burger.name}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <button form="form-{{burger.id}}" class="btn btn-default" type="submit">Devour</button>
+                            <form id="form-{{burger.id}}" class="hidden" action="/devour" method="post">
+                                <input type="text" name="num" value="{{burger.id}}">
+                            </form>
+                        </div>
+                    </div>
+                {{/unless}}
+            {{/each}}
+        </div>
+        <div class="col-sm-5">
+            {{#each burgers}}
+                {{#if burger.devoured}}
+                    <div class="panel panel-default devoured">
+                        <div class="panel-body">
+                            {{burger.id}}. {{capitalize burger.name}}
+                        </div>
+                    </div>
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+{{/if}}
